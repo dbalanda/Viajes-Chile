@@ -1,0 +1,22 @@
+*{
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  color: #FFF
+}
+
+body{
+  background-color: #000000;
+}
+
+nav{
+ z-index: 2;
+}
+
+#carrusel{
+  margin-top: -4.5em;
+}
+
+.iconbg{
+ background-color: /*#45a3d6;*/ #0dcaf0;
+}
