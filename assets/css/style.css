@@ -2,34 +2,33 @@
   border: 0px;
   padding: 0px;
   margin: 0px;
-  color: #FFF
+  color: #FFF;
+  font-family: 'Dosis', sans-serif;
 }
 
 body{
   background-color: #000000;
 }
 
-nav{
- z-index: 3;
+nav a{
+  font-size: 18px;
 }
 
-/*
 .fondonav{
-  height: 10em;
-  margin-top: -4.5em;
-  z-index: 1;
+  background-color: #000;
 }
-*/
 
 
 #carrusel{
-  /*position: relative;*/
-  margin-top: -4.5em;
-  z-index: 2;
+  position: relative;
 }
 
 .iconbg{
  background-color: #0dcaf0;
+}
+
+#quienes_somos p{
+  font-size: 20px;
 }
 
 .card-title, .card-text{
