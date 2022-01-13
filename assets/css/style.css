@@ -20,3 +20,7 @@ nav{
 .iconbg{
  background-color: /*#45a3d6;*/ #0dcaf0;
 }
+
+.card-title, .card-text{
+  color: #000;
+}
