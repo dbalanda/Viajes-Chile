@@ -10,17 +10,32 @@ body{
 }
 
 nav{
- z-index: 2;
+ z-index: 3;
 }
 
-#carrusel{
+/*
+.fondonav{
+  height: 10em;
   margin-top: -4.5em;
+  z-index: 1;
+}
+*/
+
+
+#carrusel{
+  /*position: relative;*/
+  margin-top: -4.5em;
+  z-index: 2;
 }
 
 .iconbg{
- background-color: /*#45a3d6;*/ #0dcaf0;
+ background-color: #0dcaf0;
 }
 
 .card-title, .card-text{
   color: #000;
+}
+
+footer{
+  background-color: #0dcaf0;
 }

@@ -14,6 +14,15 @@
   <body>
 
 
+<!-- No me gustó que fixed top persiguiera el viewport sin un fondo y preferí fijarlo por el
+absoluto poder de z-index. De preferir fixed top:
+- añadir fixed-top a la clase nav
+- remover el margen superior negativo del carrusel en .class
+
+Si adicionalmente quieres el fondo que aparece cuando nav abandona el carrusel:
+2- descomentar el div bajo <nav>
+3- descomentar .fondonav y la posición relativa del carrusel en código en style.css  -->
+
  <!-- sobrepuesto gracias a margen negativo de carrusel y axial z en nav. Sin fondo por defecto -->
 <nav class="navbar navbar-expand-lg navbar-dark mt-1 mt-md-3 mx-2 mx-md-5">
    <div class="container-fluid mx-md-5">
@@ -26,25 +35,31 @@
      <div class="collapse navbar-collapse" id="navbarText">
        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
          <li class="nav-item">
-           <a class="nav-link" aria-current="page" href="#">Inicio</a>
+           <a class="nav-link" aria-current="page" href="#carrusel">Inicio</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#">Quienes somos</a>
+           <a class="nav-link" href="#quienes_somos">Quienes somos</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#">Destacados</a>
+           <a class="nav-link" href="#destacados">Destacados</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#">Contacto</a>
+           <a class="nav-link" href="#contacto">Contacto</a>
          </li>
        </ul>
      </div>
    </div>
 </nav>
 
+<!-- este es un fondo para cuando el navegador abandona el carrusel
+
+-->
+
+<div class="fondonav bg-info fixed-top">
+</div>
 
 <!--LISTO carrusel, quizá un poco grande -->
-<section id="carrusel"> <!-- carrusel de niños, de bootstrap sin modificaciones lol -->
+<section class="" id="carrusel"> <!-- carrusel de niños, de bootstrap sin modificaciones lol -->
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -69,7 +84,7 @@
 </section>
 
 <!-- Quienes somos, falta agregar una fuente y tamaño de fuente apropiado -->
-<section class="container my-5 text-center" id="quienes_somos"><!-- Quienes somos -->
+<section class="container my-5 text-center d-none d-md-block" id="quienes_somos"><!-- Quienes somos -->
 
   <h2>QUIÉNES SOMOS</h2>
   <hr class="mx-5">
@@ -113,14 +128,15 @@
 </section>
 
 
-<section class="container text-center" id="destacados"> <!-- destacados, con las cartas y eso -->
+<!-- el flex es para alinear automáticamente en vista mobil -->
+<section class="container text-center mt-3" id="destacados"> <!-- destacados, con las cartas y eso -->
 
   <h2>DESTACADOS</h2>
   <hr class="mx-5">
 
     <div class="row">
 
-      <div class="col-12 col-md-3">
+      <div class="d-flex justify-content-center my-3 col-12 col-md-3">
         <div class="card" style="width: 16rem;">
           <img src="assets/img/card1.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -131,7 +147,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-3">
+      <div class="d-flex justify-content-center my-3 col-12 col-md-3">
         <div class="card" style="width: 16rem;">
           <img src="assets/img/card2.jpg" height="170em" class="card-img-top" alt="...">
           <div class="card-body">
@@ -142,7 +158,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-3">
+      <div class="d-flex justify-content-center my-3 col-12 col-md-3">
         <div class="card" style="width: 16rem;">
           <img src="assets/img/card3.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -153,7 +169,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-3">
+      <div class="d-flex justify-content-center my-3 col-12 col-md-3">
         <div class="card" style="width: 16rem;">
           <img src="assets/img/card4.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -191,8 +207,15 @@
 
 </section>
 
-<footer class="container">
-
+<!-- footer, el h2 de la forma y flex ayuda a posicionar sin demasiado padding -->
+<footer class="container-fluid mt-4 d-flex justify-content-evenly">
+  <h2 class="py-3">VIAJES CHILE</h2>
+    <div class="d-flex align-items-center">
+      <i class="fab fa-github-square fa-2x px-3"></i>
+      <i class="fab fa-linkedin fa-2x px-3"></i>
+      <i class="fab fa-twitter-square fa-2x px-3"></i>
+      <i class="fab fa-facebook-square fa-2x px-3"></i>
+    </div>
 </footer>
 
 
